@@ -9,8 +9,13 @@ app.use(cors());
 const { default: mongoose } = require("mongoose");
 
 app.use(express.json());
+
+
 app.use("/books", BookRoute);
-mongoose
+
+app.get("/", (req, res) => {
+  res.send("hello");
+});mongoose
   .connect(MONGOURL)
   .then(() => {
     console.log("APP connected TO Database");
