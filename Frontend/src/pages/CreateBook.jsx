@@ -14,7 +14,8 @@ const CreateBook = () => {
   const navigate = useNavigate();
 
   const handleSaveBook = () => {
-    const data = {
+    const data =  
+    {
       title,
       author,
       publishYear,
