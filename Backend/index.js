@@ -11,15 +11,13 @@ const cors = require("cors");
 const app = express();
 app.use(
   cors({
-    origin: ["https://deploy-mern-frontend.vercel.app"],
+    origin: " http://127.0.0.1:5173/",
     methods: ["POST", "GET"],
     credentials: true,
   })
 );
 const { default: mongoose } = require("mongoose");
-app.get("/", (req, res) => {
-  res.send("hello");
-});
+
 app.use(express.json());
 app.use("/books", BookRoute);
 mongoose
