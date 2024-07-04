@@ -1,10 +1,8 @@
 require("dotenv").config();
 
 const express = require("express");
-const { PORT, MONGOURL } = require("./config");
 const BookRoute = require("./routes/route");
-const BookModel = require("./models/bookmodel");
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5555;
 const mongoUri = process.env.MONGO_URI;
 const cors = require("cors");
 
