@@ -3,6 +3,7 @@ const { PORT, MONGOURL } = require("./config");
 const BookRoute = require("./routes/route");
 const BookModel = require("./models/bookmodel");
 const cors = require("cors");
+const port = PORT;
 
 const app = express();
 app.use(cors());
