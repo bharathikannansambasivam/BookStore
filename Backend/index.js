@@ -11,16 +11,16 @@ const { default: mongoose } = require("mongoose");
 
 app.use(express.json());
 
-
 app.use("/books", BookRoute);
 
 app.get("/", (req, res) => {
   res.send("hello");
-});mongoose
+});
+mongoose
   .connect(MONGOURL)
   .then(() => {
     console.log("APP connected TO Database");
-    app.listen(PORT, () => {
+    app.listen(port, () => {
       console.log(`PORT RUNNING ON ${PORT}`);
     });
   })
