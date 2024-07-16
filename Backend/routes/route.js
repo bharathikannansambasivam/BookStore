@@ -6,7 +6,7 @@ const route = express.Router();
 route.post("/", async (req, res) => {
   try {
     if (!req.body.title || !req.body.author || !req.body.publishYear) {
-      console.log("sen all Field");
+      console.log("send all Field");
       return res.send({ message: "send all field" });
     }
 
@@ -26,7 +26,6 @@ route.post("/", async (req, res) => {
 //GET ALL BOOKS
 route.get("/", async (req, res) => {
   try {
-    console.log("hi from get try block");
     const books = await BookModel.find();
     return res.status(201).send({
       count: books.length,
