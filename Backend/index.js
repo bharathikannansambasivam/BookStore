@@ -1,11 +1,10 @@
 require("dotenv").config();
-
 const express = require("express");
 const BookRoute = require("./routes/route");
-const port = process.env.PORT || 5555;
+const BookModel = require("./models/bookmodel");
+const port = process.env.PORT || 3000;
 const mongoUri = process.env.MONGO_URI;
 const cors = require("cors");
-
 const app = express();
 app.use(
   cors({
